@@ -13,6 +13,46 @@ const Document = styled.img`
     }
 `
 
+const DriveLink = styled.div`
+    display: none;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background-color: ${({ theme }) => theme.primary};
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    width: fit-content;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background-color: ${({ theme }) => theme.primary + 'CC'};
+        transform: scale(1.02);
+    }
+    
+    img {
+        height: 20px;
+        width: 20px;
+    }
+`
+
+const SimpleLink = styled.div`
+    display: none;
+    align-items: center;
+    gap: 6px;
+    color: ${({ theme }) => theme.primary};
+    font-size: 14px;
+    font-weight: 500;
+    width: fit-content;
+    cursor: pointer;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+`
+
 const Description = styled.div`
     width: 100%;
     font-size: 15px;
@@ -56,6 +96,14 @@ const Card = styled.div`
     }
 
     &:hover ${Document}{
+        display: flex;
+    }
+
+    &:hover ${DriveLink}{
+        display: flex;
+    }
+
+    &:hover ${SimpleLink}{
         display: flex;
     }
 
@@ -175,11 +223,19 @@ const ExperienceCard = ({ experience }) => {
                     </>
                 }
             </Description>
-            {experience.doc &&
+            {experience.doc && experience.docIcon && experience.company === "Coursera" && (
+                <a href={experience.doc} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                    <DriveLink>
+                        <img src={experience.docIcon} alt="Drive" />
+                        View Documents
+                    </DriveLink>
+                </a>
+            )}
+            {experience.doc && experience.company !== "Coursera" && (
                 <a href={experience.doc} target="new">
                     <Document src={experience.doc} />
                 </a>
-            }
+            )}
         </Card>
     )
 }

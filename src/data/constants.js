@@ -9,6 +9,7 @@ import netflix from './images/netflix.png';
 import constitution from './images/constitution.png';
 import id from './images/id.png';
 import cer from './images/st.png';
+import Eduub from './images/Eduub.png';
 
 export const Bio = {
   name: "Manoranjan Sahoo",
@@ -210,14 +211,17 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://seeklogo.com/images/D/DevCo_Philippines-logo-CF15D3244B-seeklogo.com.gif",
-    role: "Cloud Engineer Intern",
-    company: "Devco services",
-    desc: "Working as a Cloud Engineer for company's customers.",
+    img: "https://media.licdn.com/dms/image/v2/D560BAQGwZerr5mxZew/company-logo_200_200/B56ZcxYpnvHgAI-/0/1748880235295/shyftlabsio_logo?e=2147483647&v=beta&t=lLILpHD4QLeO-WlZTKWtJqJS7UIXw8oekVS36KX9j2I",
+    role: "Backend Developer Intern",
+    company: "ShyftLabs",
+    desc: "Software devloper intern.",
     skills: [
-      "AWS",
-      "EC2",
-    ],
+    "Node.js",
+    "AWS",
+    "PostgreSQL",
+    "MongoDB",
+    "GraphQL"
+  ],
     doc: "",
   },
   {
@@ -317,6 +321,7 @@ export const experiences = [
       "Drive link: 👇"
     ],
     doc:"https://drive.google.com/drive/folders/1BckfR_hvi0nNZV3pNQwcv8LcoI_bw5Ml?usp=sharing",
+    docIcon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/2048px-Google_Drive_icon_%282020%29.svg.png",
   },
 ];
 
@@ -352,6 +357,29 @@ export const education = [
 
 export const projects = [
   {
+    id: 10,
+    title: "EDUUB",
+    description:
+      "RAG-based AI tutoring system that learns from pre-recorded lectures and replicates the teacher’s unique teaching style and voice, enabling real-time, personalized Q&A that feels like live tutoring.",
+    image: Eduub,
+    tags: [
+     "Node.js",
+    "FFmpeg",
+    "Groq",
+    "OpenAI Whisper",
+    "ChromaDB",
+    "Retrieval Augmented Generation",
+    "MongoDB",
+    "Artificial Intelligence",
+    "Vector Database",
+    "Eleven Labs",
+    "Azure"
+    ],
+    category: "web app",
+    github: "https://github.com/Manoranjanhere/EDUUB-AI-",
+    webapp: "https://eduub.mano.systems",
+  },
+  {
     id: 9,
     title: "Apna Rooms",
     description:
@@ -380,7 +408,7 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/Manoranjanhere/ApnaRooms",
-    webapp: "https://apnarooms.tech/listings",
+    webapp: "https://apnarooms.onrender.com",
   },
   {
     id: 0,
